@@ -32,7 +32,7 @@ static int	ft_putnbr_p(unsigned long long n, char *base, int j, int fe)
 	int	i;
 
 	i = 0;
-	if (!n && fe == 0)
+	if (!n)
 	{
 		ft_putstr("(nil)");
 		return (5);
@@ -98,11 +98,9 @@ static int	format(char s, va_list args)
 int	ft_printf(const char *s, ...)
 {
 	va_list	args;
-	int		i;
 	int		printedc;
 
 	va_start(args, s);
-	i = 0;
 	printedc = 0;
 	while (*s)
 	{
